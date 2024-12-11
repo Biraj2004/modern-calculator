@@ -36,6 +36,7 @@ That's it! You should now see the calculator running in your browser.
 ## Usage
 
 - Click on the buttons or use your keyboard to input numbers and operations.
+- Use keyboard to enter decimal points.
 - Press 'Enter' or click '=' to calculate the result.
 - Use 'Esc' key or click 'AC' to clear the calculator.
 - Toggle between dark and light themes using the 'Toggle Theme' button.
