@@ -69,7 +69,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## Contact
 
-Biraj Sarkar - [@birajdev2004]([https://x.com/birajdev2004]) - birajsarkar67@gmail.com
+Biraj Sarkar - [@birajdev2004][https://x.com/birajdev2004] - birajsarkar67@gmail.com
 
 ## Acknowledgements
 
