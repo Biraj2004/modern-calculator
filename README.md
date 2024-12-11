@@ -57,6 +57,7 @@ This project is great for beginners to learn about:
 Here are some ideas to expand this project:
 
 - Add more advanced operations (square root, exponents, etc.)
+- Fix and improve the comma seperator logic for Indian numbering system
 - Improve the responsiveness
 - Implement a history feature to review past calculations
 - Create a scientific calculator mode
