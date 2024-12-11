@@ -1,0 +1,212 @@
+html {
+    --bg-color: #1a1b1f;
+    --calculator-bg: #1e1f24;
+    --display-bg: #1e1f24;
+    --button-bg: #2a2d36;
+    --button-hover: #343842;
+    --button-active: #3e424d;
+    --button-color: #ffffff;
+    --accent-green: #4cd964;
+    --accent-green-hover: #45c359;
+    --accent-orange: #ff9500;
+    --accent-orange-hover: #e68600;
+    --operator-color: #ff9500;
+    --text-color: #ffffff;
+    --button-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.1),
+    0 2px 4px rgba(0, 0, 0, 0.2);
+    --calculator-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+}
+
+html.dark-theme {
+    --bg-color: #ffffff;
+    --calculator-bg: #f0f0f0;
+    --display-bg: #f0f0f0;
+    --button-bg: #e0e0e0;
+    --button-hover: #d5d5d5;
+    --button-active: #cacaca;
+    --button-color: #000000;
+    --accent-green: #34c759;
+    --accent-green-hover: #2eb750;
+    --accent-orange: #ff9f0a;
+    --accent-orange-hover: #e68600;
+    --operator-color: #ff9f0a;
+    --text-color: #000000;
+    --button-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.5),
+    0 2px 4px rgba(0, 0, 0, 0.1);
+    --calculator-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--bg-color);
+    transition: background-color 0.3s ease;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.calculator {
+    background-color: var(--calculator-bg);
+    border-radius: 20px;
+    box-shadow: var(--calculator-shadow);
+    overflow: hidden;
+    width: 100%;
+    max-width: 375px;
+    padding: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.display {
+    background-color: var(--display-bg);
+    color: var(--text-color);
+    padding: 20px;
+    text-align: right;
+    transition: color 0.3s ease;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+#previous-operand,
+#current-operand {
+    font-family: 'SF Mono', 'Consolas', 'Monaco', monospace;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    font-size: 2.4rem;
+    font-weight: 500;
+    min-height: 2.4rem;
+}
+
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+button {
+    border: none;
+    outline: none;
+    background-color: var(--button-bg);
+    color: var(--button-color);
+    font-size: 1.5rem;
+    font-weight: 500;
+    width: 65px;
+    height: 65px;
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: var(--button-shadow);
+    transition: all 0.2s ease;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button:hover {
+    background-color: var(--button-hover);
+}
+
+button:active {
+    background-color: var(--button-active);
+    transform: translateY(1px);
+}
+
+.span-two {
+    grid-column: span 2;
+    width: auto;
+    border-radius: 35px;
+}
+
+.accent-green {
+    background-color: var(--accent-green);
+    color: #ffffff;
+}
+
+.accent-green:hover {
+    background-color: var(--accent-green-hover);
+}
+
+.accent-orange {
+    background-color: var(--accent-orange);
+    color: #ffffff;
+}
+
+.accent-orange:hover {
+    background-color: var(--accent-orange-hover);
+}
+
+.operator {
+    color: var(--operator-color);
+}
+
+#theme-toggle {
+    width: 100%;
+    margin-top: 20px;
+    border-radius: 12px;
+    font-size: 1rem;
+    height: 40px;
+}
+
+@media (max-width: 480px) {
+    .calculator {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .buttons {
+        gap: 8px;
+    }
+
+    button {
+        width: 55px;
+        height: 55px;
+        font-size: 1.3rem;
+    }
+
+    #current-operand {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 320px) {
+    .calculator {
+        padding: 10px;
+    }
+
+    .buttons {
+        gap: 6px;
+    }
+
+    button {
+        width: 45px;
+        height: 45px;
+        font-size: 1.1rem;
+    }
+
+    #current-operand {
+        font-size: 1.5rem;
+    }
+}
+
+@media (hover: none) {
+    button:hover {
+        background-color: var(--button-bg);
+    }
+
+    .accent-green:hover {
+        background-color: var(--accent-green);
+    }
+
+    .accent-orange:hover {
+        background-color: var(--accent-orange);
+    }
+}
+
