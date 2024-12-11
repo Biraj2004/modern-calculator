@@ -78,6 +78,7 @@ class Calculator {
         this.previousOperand = '';
     }
 
+//Update for comma separator
     getDisplayNumber(number) {
         const stringNumber = number.toString();
         const integerDigits = parseFloat(stringNumber.split('.')[0]);
@@ -188,3 +189,4 @@ document.addEventListener('contextmenu', (event) => {
         event.preventDefault();
     }
 }, false);
+
