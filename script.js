@@ -80,34 +80,25 @@ class Calculator {
 
     getDisplayNumber(number) {
         const stringNumber = number.toString();
-        const [integerPart, decimalPart] = stringNumber.split('.');
-
-        // Format integer part with Indian numbering system
-        let formattedInteger = '';
-        let count = 0;
-        for (let i = integerPart.length - 1; i >= 0; i--) {
-            if (count === 3 && i !== 0) {
-                formattedInteger = ',' + formattedInteger;
-                count = 0;
-            } else if (count === 2 && i !== 0 && formattedInteger.length > 0) {
-                formattedInteger = ',' + formattedInteger;
-                count = 0;
-            }
-            formattedInteger = integerPart[i] + formattedInteger;
-            count++;
-        }
-
-        if (decimalPart != null) {
-            return `${formattedInteger}.${decimalPart}`;
+        const integerDigits = parseFloat(stringNumber.split('.')[0]);
+        const decimalDigits = stringNumber.split('.')[1];
+        let integerDisplay;
+        if (isNaN(integerDigits)) {
+            integerDisplay = '';
         } else {
-            return formattedInteger;
+            integerDisplay = integerDigits.toLocaleString('en', { maximumFractionDigits: 0 });
+        }
+        if (decimalDigits != null) {
+            return `${integerDisplay}.${decimalDigits}`;
+        } else {
+            return integerDisplay;
         }
     }
 
     updateDisplay() {
         this.currentOperandElement.textContent = this.getDisplayNumber(this.currentOperand);
         if (this.operation != null) {
-            this.previousOperandElement.textContent = `${this.getDisplayNumber(this.previousOperand)} ${this.operation} `;
+            this.previousOperandElement.textContent = `${this.getDisplayNumber(this.previousOperand)} ${this.operation}`;
         } else {
             this.previousOperandElement.textContent = '';
         }
