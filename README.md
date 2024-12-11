@@ -13,7 +13,7 @@ A sleek, responsive calculator web application built with HTML, CSS, and JavaScr
 
 ## Live Demo
 
-Check out the live demo [here](https://your-calculator-demo-link.com).
+Check out the live demo [here](https://biraj2004.github.io/modern-calculator).
 
 ## Getting Started
 
@@ -69,7 +69,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## Contact
 
-Biraj Sarkar - [@birajdev2004][https://x.com/birajdev2004] - birajsarkar67@gmail.com
+Biraj Sarkar - [@birajdev2004](https://x.com/birajdev2004) - birajsarkar67@gmail.com
 
 ## Acknowledgements
 
