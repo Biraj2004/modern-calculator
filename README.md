@@ -1,7 +1,5 @@
 # Modern Calculator
 
-![Calculator Preview](https://placeholder-for-calculator-screenshot.com)
-
 A sleek, responsive calculator web application built with HTML, CSS, and JavaScript. Perfect for beginners looking to understand front-end web development and basic JavaScript logic.
 
 ## Features
