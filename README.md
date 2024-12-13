@@ -13,6 +13,7 @@ A sleek, responsive calculator web application built with HTML, CSS, and JavaScr
 ## Live Demo
 
 Check out the live demo [here](https://biraj2004.github.io/modern-calculator).
+
 ![image](https://github.com/user-attachments/assets/7e9e63df-7ada-4963-81b5-cea680110f7c)
 
 
